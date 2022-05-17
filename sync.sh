@@ -7,5 +7,7 @@ git pull --rebase
 sleep 1
 git push
 git fetch
+gfetch=$(git fetch 2>&1 >/dev/null)
 gstatus=`git status`
-notify-send 'git sync' " $gstatus"
+notify-send 'git fetch'  "$gfetch"
+notify-send 'git sync' "$gstatus"
