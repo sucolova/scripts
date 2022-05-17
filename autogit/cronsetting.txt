@@ -1,0 +1,8 @@
+# 
+# m h  dom mon dow   command
+
+XDG_RUNTIME_DIR="/run/user/1000"
+
+ 0 * * * * (cd /home/lukas/Documents/notes/; ./sync.sh)
+ @reboot sleep 30 && (cd /home/lukas/Documents/notes/; ./sync.sh)
+
